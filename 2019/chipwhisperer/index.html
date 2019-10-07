@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Hardware Hacking con ChipWhisperer</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Calos Quijano">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Power Analysis</h1>
+					<h4>Hardware Hacking con ChipWhisperer</h4>
+					<img  width="500" height="303" data-src="img/chipwhisperer.jpg" >
+					<p>
+						<small>Bsides Málaga 2019</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Sobre mi</h2>
+					<img  data-src="img/carlos.jpeg" >
+					<p>
+          <ul>
+            <li>
+              Responsable de Hardware y firmware en Homyhub
+          </li>
+						<li>
+              Mas de 10 años de experiencia en el desarrollo de Hardware y Firmware.
+            </li>
+					</ul>
+					</p>
+				</section>
+
+        <section>
+					<h2>El Problema</h2>
+				</section>
+
+        <section>
+					<h2>El Problema</h2>
+					<img  data-src="img/basics_bus.png" >
+				</section>
+
+          <section>
+					<h2>El Problema</h2>
+					<img  data-src="img/basics_trt.png" >
+				</section>
+
+          <section>
+					<h2>El Problema</h2>
+					<img  data-src="img/basics_trt_cap.png" >
+					<p>Las lineas de bus se comportan como un condensador</p>
+				</section>
+ 
+        <section>
+					<h2>El Problema</h2>
+					<img   width="300"  data-src="img/basics_trt.png" >
+					<img   data-src="img/Cmos_sw.png" >
+				</section>
+
+        <section>
+					<h2>El Problema</h2>
+					<img height="400" data-src="img/cmos_trans.png" >
+					<p>Las transiciones tienen que ser muy abruptas!</p>
+				</section>
+
+
+        <section>
+					<h2>El Problema</h2>
+					<img  data-src="img/crono1.png" style="background-color:white;">
+				</section>
+
+        <section>
+					<h2>El Problema</h2>
+					<img  data-src="img/crono2.png" style="background-color:white;">
+				</section>
+        <section>
+					<h2>El Problema</h2>
+					<p>Mediante el analisis del consumo puedo saber cuantos 1s hay en el bus de datos en un momento dado</p>
+					<p>Si puedo saber en que momento está la clave privada en el bus....</p>
+				</section>
+				
+				<section data-background="img/awesome.gif">
+				</section>
+
+        <section>
+					<h2>Cómo?</h2>
+				</section>
+
+        <section>
+					<h2>Cómo?</h2>
+					<img  data-src="img/power_mul.png" style="background-color:white;">
+				</section>
+
+        <section>
+					<h2>Cómo?</h2>
+					<img  data-src="img/power_emp.png" style="background-color:white;">
+				</section>
+
+        <section>
+					<h2>Cómo?</h2>
+					<img  data-src="img/em_probe_on_chip.jpg">
+        </section>
+
+        <section>
+					<h2>Cómo?</h2>
+					<p>Condensadores de desacoplo </p>
+        </section>
+
+        <section>
+					<h2>Cómo?</h2>
+					<p><small>Condensadores de desacoplo </small></p>
+					<img  data-src="img/deco_cap_sch.png" style="background-color:white;">
+				</section>
+
+        <section>
+					<h2>Cómo?</h2>
+					<p><small>Condensadores de desacoplo </small></p>
+					<img  data-src="img/cap_wire.png" style="background-color:white;">
+					<img  data-src="img/caps_wire_2.png" style="background-color:white;">
+				</section>
+
+        <section>
+					<h2>Cómo?</h2>
+					<h4>Sincronización</h4>
+					<ul>
+					 <li>Buffer del Chipwhisperer solo tiene 24k Muestas @ Max freq 192Mhz</li>
+					 <li>Solo tenemos  125us para muestrear! </li>
+					 <li>Necesitamos altas frecuencias, por las transiciones Abruptas! </li>
+					 <li>Tenemos que muestrear de manera MUY Precisa, en el momento exacto</li>
+				</ul>	
+				</section>
+
+        <section>
+					<h4>Sincronización</h4>
+					<img  data-src="img/trigger.png" style="background-color:white;">
+					<p>La sincronicación es clave del exito del ataque!<p>
+				</section>
+
+        <section>
+					<h4>Sincronización</h4>
+					<img  data-src="img/clk_recovery.png" style="background-color:white;">
+					<p>Restaurar la señal de reloj desde el consumo electrico</p>
+				</section>
+
+        <section>
+					<h2>¿Qué hay de nuevo?</h2>
+				</section>
+        
+				<section>
+					<h2>¿Qué hay de nuevo?</h2>
+          <p>
+          Power Analysis Tiene mas de 20 Años!
+          </p>
+					<blockquote>
+            "SPA and DPA were introduced to the open cryptology community in 1998 by Paul Kocher, Joshua Jaffe and Benjamin Jun."
+					</blockquote>
+          <small>
+            Wikipedia
+          </small>
+				</section>
+
+				<section data-background="img/money.gif">
+					<h2>Precio!</h2>
+				</section>
+
+        <section>
+					<h2>Precio!</h2>
+					<img  data-src="img/expensive_osbc.jpg">
+				</section>
+
+        <section>
+					<h2>Precio!</h2>
+          <table>
+						<thead>
+							<tr>
+								<th>Autor</th>
+								<th>Paper</th>
+								<th>Año</th>
+								<th>Osciloscopio</th>
+								<th>Precio</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Dario Carluccio</td>
+								<td>Electromagnetic  Side Channel Analysis  Embedded Crypto Devices</td>
+								<td>2005</td>
+								<td>Infiniium 5432D MSO</td>
+								<td>8.000 USD</td>
+							</tr>
+							<tr>
+								<td>Youssef Souissi et al.</td>
+								<td>Embedded systems security: An evaluation methodology against Side Channel Attacks</td>
+								<td>2011</td>
+								<td>Infiniium 54855</td>
+								<td>20.000 USD</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+        <section>
+					<h2>Precio!</h2>
+					<img  data-src="img/chipshisperer_price.png">
+				</section>
+
+        <section>
+					<h2>Precio!</h2>
+					<img  data-src="img/diff_probe_chip_price.png">
+				</section>
+
+				<section data-background="img/evil.gif">
+					<h2>Maldades</h2>
+					<p>¿ Que podemos hacer con todo esto ?</p>
+				</section>
+
+         <section>
+					<h2>Maldades</h2>
+					<img  data-src="img/smartcard.png" style="background-color:black;">
+					<p>Clonar Smart Cards</p>
+				</section>
+
+        <section>
+					<h2>Maldades</h2>
+					<img  data-src="img/credit-card.jpg">
+					<p>Clonar tarjetas de credito</p>
+				</section>
+
+        <section>
+					<h2>Maldades</h2>
+					<img  data-src="img/dni.png">
+					<p>Clonar DNI</p>
+				</section>
+
+        <section>
+					<h2>Conclusiones</h2>
+					<ul>
+						<li class="fragment">No hemos roto el cifrado en ningún momento</li>
+						<li class="fragment">El problema es como funciona el hardware</li>
+            <li class="fragment">Solo se puede solucionar en hardware</li>
+            <li class="fragment">Todo esto funciona solo si tenemos acceso físico al dispositivo</li>
+					</ul>
+				</section>
+
+        <section>
+					<h2>Demo TIME!</h2>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
