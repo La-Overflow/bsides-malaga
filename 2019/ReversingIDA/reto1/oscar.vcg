@@ -1,0 +1,244 @@
+graph: {
+title: "Xrefs from "
+// IDA palette
+colorentry 32: 0 0 0
+colorentry 33: 106 153 85
+colorentry 34: 106 153 85
+colorentry 35: 128 128 128
+colorentry 36: 128 128 128
+colorentry 37: 212 212 212
+colorentry 38: 156 220 254
+colorentry 39: 156 220 254
+colorentry 40: 220 220 170
+colorentry 41: 212 212 212
+colorentry 42: 215 186 125
+colorentry 43: 0 255 0
+colorentry 44: 106 153 85
+colorentry 45: 215 186 125
+colorentry 46: 106 153 85
+colorentry 47: 86 156 214
+colorentry 48: 229 20 0
+colorentry 49: 128 128 0
+colorentry 50: 1 1 1
+colorentry 51: 192 192 192
+colorentry 52: 181 206 168
+colorentry 53: 220 220 170
+colorentry 54: 0 0 255
+colorentry 55: 212 212 212
+colorentry 56: 156 220 254
+colorentry 57: 156 220 254
+colorentry 58: 156 220 254
+colorentry 59: 156 220 254
+colorentry 60: 197 134 192
+colorentry 61: 206 145 120
+colorentry 62: 206 145 120
+colorentry 63: 106 153 85
+colorentry 64: 197 134 192
+colorentry 65: 156 220 254
+colorentry 66: 197 134 192
+colorentry 67: 212 212 212
+colorentry 68: 156 220 254
+colorentry 69: 220 220 170
+colorentry 70: 0 255 255
+colorentry 71: 106 153 85
+colorentry 72: 0 0 0
+colorentry 73: 30 30 30
+colorentry 74: 38 79 120
+colorentry 75: 0 255 255
+colorentry 76: 86 156 214
+colorentry 77: 128 0 0
+colorentry 78: 133 133 133
+colorentry 79: 128 128 0
+colorentry 80: 255 0 255
+colorentry 81: 0 0 0
+colorentry 82: 212 212 212
+colorentry 83: 0 0 0
+colorentry 84: 50 205 50
+node: { title: "0" label: "start" color: green borderwidth: 10 bordercolor: 82  }
+node: { title: "1" label: "cargar_IAT" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "2" label: "Sleep: dd offset kernel32_Sleep" textcolor: 78 bordercolor: black }
+node: { title: "3" label: "sub_40190E" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "4" label: "sub_401BE7" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "5" label: "sub_4013B7" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "6" label: "sub_4012C4" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "7" label: "sub_401C71" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "8" label: "GetStartupInfoW: dd 76EC4D40h" textcolor: 78 bordercolor: black }
+node: { title: "9" label: "sub_40137F" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "10" label: "sub_401A75" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "11" label: "sub_4024AA" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "12" label: "sub_4024F3" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "13" label: "ExitProcess: dd offset kernel32_ExitProcess" textcolor: 78 bordercolor: black }
+node: { title: "14" label: "sub_40116E" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "15" label: "sub_4011F0" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "16" label: "sub_401275" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "17" label: "LoadLibraryA: dd 76EC49D7h" textcolor: 78 bordercolor: black }
+node: { title: "18" label: "sub_401628" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "19" label: "sub_40183F" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "20" label: "GetNativeSystemInfo: dd 76ED10B5h" textcolor: 78 bordercolor: black }
+node: { title: "21" label: "GetModuleFileNameW: dd 76EC4950h" textcolor: 78 bordercolor: black }
+node: { title: "22" label: "lstrcpyW: dd 76EE3102h" textcolor: 78 bordercolor: black }
+node: { title: "23" label: "SHGetFolderPathW: dd 75B45708h" textcolor: 78 bordercolor: black }
+node: { title: "24" label: "sub_401A50" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "25" label: "lstrcmpiW: dd 76EDD5CDh" textcolor: 78 bordercolor: black }
+node: { title: "26" label: "CreateDirectoryW: dd 76EC4259h" textcolor: 78 bordercolor: black }
+node: { title: "27" label: "PathCombineW: dd 76A7C39Ch" textcolor: 78 bordercolor: black }
+node: { title: "28" label: "sub_401A17" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "29" label: "CopyFileW: dd 76EE830Dh" textcolor: 78 bordercolor: black }
+node: { title: "30" label: "CreateProcessW: dd offset kernel32_CreateProcessW" textcolor: 78 bordercolor: black }
+node: { title: "31" label: "CloseHandle: dd 76EC1410h" textcolor: 78 bordercolor: black }
+node: { title: "32" label: "sub_40118E" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "33" label: "sub_4024C2" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "34" label: "sub_4011A9" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "35" label: "FindResourceW: dd offset kernel32_FindResourceW" textcolor: 78 bordercolor: black }
+node: { title: "36" label: "LoadResource: dd offset kernel32_LoadResource" textcolor: 78 bordercolor: black }
+node: { title: "37" label: "LockResource: dd 76EC5959h" textcolor: 78 bordercolor: black }
+node: { title: "38" label: "SizeofResource: dd 76EC5AC9h" textcolor: 78 bordercolor: black }
+node: { title: "39" label: "GetProcessHeap: dd offset kernel32_GetProcessHeap" textcolor: 78 bordercolor: black }
+node: { title: "40" label: "RtlFreeHeap: dd 7792DF85h" textcolor: 78 bordercolor: black }
+node: { title: "41" label: "sub_4011D5" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "42" label: "sub_40128F" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "43" label: "GetModuleHandleW: dd 76EC34B0h" textcolor: 78 bordercolor: black }
+node: { title: "44" label: "sub_401650" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "45" label: "sub_401702" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "46" label: "sub_4016A9" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "47" label: "sub_401757" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "48" label: "sub_401000" color: 76 textcolor: 73 bordercolor: black }
+node: { title: "49" label: "RtlReAllocateHeap: dd 77941F6Eh" textcolor: 78 bordercolor: black }
+node: { title: "50" label: "RtlAllocateHeap: dd 7792E026h" textcolor: 78 bordercolor: black }
+node: { title: "51" label: "GetComputerNameW: dd 76ECDD0Eh" textcolor: 78 bordercolor: black }
+node: { title: "52" label: "GetUserNameW: dd 773E157Ah" textcolor: 78 bordercolor: black }
+node: { title: "53" label: "RegOpenKeyExW: dd 773E468Dh" textcolor: 78 bordercolor: black }
+node: { title: "54" label: "RegQueryValueExW: dd 773E46ADh" textcolor: 78 bordercolor: black }
+node: { title: "55" label: "RegCloseKey: dd 773E469Dh" textcolor: 78 bordercolor: black }
+// node 0
+edge: { sourcename: "0" targetname: "1" }
+edge: { sourcename: "0" targetname: "2" }
+edge: { sourcename: "0" targetname: "3" }
+edge: { sourcename: "0" targetname: "4" }
+edge: { sourcename: "0" targetname: "5" }
+edge: { sourcename: "0" targetname: "6" }
+edge: { sourcename: "0" targetname: "7" }
+edge: { sourcename: "0" targetname: "8" }
+edge: { sourcename: "0" targetname: "9" }
+edge: { sourcename: "0" targetname: "10" }
+edge: { sourcename: "0" targetname: "11" }
+edge: { sourcename: "0" targetname: "12" }
+edge: { sourcename: "0" targetname: "13" }
+// node 1
+edge: { sourcename: "1" targetname: "14" }
+edge: { sourcename: "1" targetname: "15" }
+edge: { sourcename: "1" targetname: "16" }
+edge: { sourcename: "1" targetname: "17" }
+// node 2
+// node 3
+edge: { sourcename: "3" targetname: "18" }
+edge: { sourcename: "3" targetname: "19" }
+// node 4
+edge: { sourcename: "4" targetname: "20" }
+// node 5
+edge: { sourcename: "5" targetname: "21" }
+edge: { sourcename: "5" targetname: "22" }
+edge: { sourcename: "5" targetname: "23" }
+edge: { sourcename: "5" targetname: "24" }
+edge: { sourcename: "5" targetname: "6" }
+edge: { sourcename: "5" targetname: "25" }
+edge: { sourcename: "5" targetname: "26" }
+edge: { sourcename: "5" targetname: "27" }
+edge: { sourcename: "5" targetname: "28" }
+edge: { sourcename: "5" targetname: "29" }
+edge: { sourcename: "5" targetname: "2" }
+edge: { sourcename: "5" targetname: "30" }
+edge: { sourcename: "5" targetname: "31" }
+// node 6
+edge: { sourcename: "6" targetname: "32" }
+edge: { sourcename: "6" targetname: "33" }
+edge: { sourcename: "6" targetname: "34" }
+// node 7
+edge: { sourcename: "7" targetname: "35" }
+edge: { sourcename: "7" targetname: "36" }
+edge: { sourcename: "7" targetname: "37" }
+edge: { sourcename: "7" targetname: "38" }
+edge: { sourcename: "7" targetname: "33" }
+edge: { sourcename: "7" targetname: "24" }
+// node 8
+// node 9
+// node 10
+// node 11
+// node 12
+edge: { sourcename: "12" targetname: "39" }
+edge: { sourcename: "12" targetname: "40" }
+// node 13
+// node 14
+// node 15
+edge: { sourcename: "15" targetname: "41" }
+// node 16
+edge: { sourcename: "16" targetname: "32" }
+// node 17
+// node 18
+edge: { sourcename: "18" targetname: "42" }
+edge: { sourcename: "18" targetname: "43" }
+// node 19
+edge: { sourcename: "19" targetname: "44" }
+edge: { sourcename: "19" targetname: "42" }
+edge: { sourcename: "19" targetname: "45" }
+edge: { sourcename: "19" targetname: "46" }
+edge: { sourcename: "19" targetname: "6" }
+edge: { sourcename: "19" targetname: "47" }
+edge: { sourcename: "19" targetname: "12" }
+// node 20
+// node 21
+// node 22
+// node 23
+// node 24
+// node 25
+// node 26
+// node 27
+// node 28
+// node 29
+// node 30
+// node 31
+// node 32
+edge: { sourcename: "32" targetname: "48" }
+// node 33
+edge: { sourcename: "33" targetname: "39" }
+edge: { sourcename: "33" targetname: "49" }
+edge: { sourcename: "33" targetname: "50" }
+// node 34
+// node 35
+// node 36
+// node 37
+// node 38
+// node 39
+// node 40
+// node 41
+// node 42
+edge: { sourcename: "42" targetname: "32" }
+edge: { sourcename: "42" targetname: "34" }
+// node 43
+// node 44
+edge: { sourcename: "44" targetname: "51" }
+edge: { sourcename: "44" targetname: "33" }
+edge: { sourcename: "44" targetname: "24" }
+// node 45
+// node 46
+edge: { sourcename: "46" targetname: "52" }
+edge: { sourcename: "46" targetname: "33" }
+edge: { sourcename: "46" targetname: "24" }
+// node 47
+edge: { sourcename: "47" targetname: "53" }
+edge: { sourcename: "47" targetname: "54" }
+edge: { sourcename: "47" targetname: "33" }
+edge: { sourcename: "47" targetname: "12" }
+edge: { sourcename: "47" targetname: "55" }
+edge: { sourcename: "47" targetname: "47" }
+// node 48
+edge: { sourcename: "48" targetname: "28" }
+edge: { sourcename: "48" targetname: "24" }
+// node 49
+// node 50
+// node 51
+// node 52
+// node 53
+// node 54
+// node 55
+}
